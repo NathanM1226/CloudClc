@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Homepage</title>
+    <style>
+            /* .navbar {
+                position:fixed;
+            background-color: #000000b6; 
+            color: #d51414; 
+            padding: 10px;
+            width:"100%";
+        }
+
+        .navbar a {
+            color: #000; 
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 16px;
+        } */
+        .hero-container {
+            position: relative;
+            text-align: center;
+            height: 100vh;
+           
+        }
+
+        /* Style for the hero image */
+        .hero-image {
+            width: 100%; 
+            height: auto; 
+            max-height: 400px; 
+            object-fit: cover; 
+        }
+
+        
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 24px;
+        }
+
+        /* Style for the text overlay */
+        .text-overlay {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* Optional: Add additional styling for the text */
+        .text-overlay h1 {
+            font-size: 150px;
+            margin-bottom: 10px;
+            color:rgb(255, 255, 255);
+           
+
+        }
+
+        .text-overlay p {
+            font-size: 16px;
+            font-family:'Courier New', Courier, monospace;
+        }
+        .product-button {
+            background-color: #0401008e;
+            color: #d50606;
+            padding: 10px 20px;
+            font-size: 55px;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="navbar">
+        
+        <a th:href="@{/cars}">Cars</a>
+        
+    </div> -->
+
+
+    <div class="hero-container">
+
+
+    <img th:src="@{/images/cars1.png}">
+    <div class="text-overlay">
+        <h1>Welcome to Our Car Dealership</h1>
+        <a th:href="@{/cars}" class="product-button">View Cars</a>
+    </div>
+
+    </div>
+   
+
+</body>
+</html>
