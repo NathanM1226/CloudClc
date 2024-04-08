@@ -4,28 +4,24 @@
     <meta charset="UTF-8">
     <title>Homepage</title>
     <style>
-<style>
-    .navbar {
-        background-color: #000;
-        overflow: hidden;
-    }
+        .navbar {
+            background-color: #000;
+            overflow: hidden;
+        }
 
-    .navbar a {
-        float: left;
-        display: block;
-        color: white;
-        text-align: center;
-        padding: 14px 20px;
-        text-decoration: none;
-    }
-
-   
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
 
         .hero-container {
             position: relative;
             text-align: center;
             height: 100vh;
-           
         }
 
         /* Style for the hero image */
@@ -36,7 +32,6 @@
             object-fit: cover; 
         }
 
-        
         .hero-text {
             position: absolute;
             top: 50%;
@@ -57,15 +52,14 @@
         .text-overlay h1 {
             font-size: 150px;
             margin-bottom: 10px;
-            color:rgb(255, 255, 255);
-           
-
+            color: rgb(255, 255, 255);
         }
 
         .text-overlay p {
             font-size: 16px;
-            font-family:'Courier New', Courier, monospace;
+            font-family: 'Courier New', Courier, monospace;
         }
+
         .product-button {
             background-color: #0401008e;
             color: #d50606;
@@ -78,24 +72,18 @@
     </style>
 </head>
 <body>
-  <div class="navbar">
+    <div class="navbar">
         <a href="/">Home</a>
         <a th:href="@{/cars}">Cars</a>
-       <a href="login.html">Login</a>
+        <a href="login.html">Login</a>
     </div>
-
 
     <div class="hero-container">
-
-
-    <img th:src="@{/images/cars1.png}">
-    <div class="text-overlay">
-        <h1>Welcome to Our Car Dealership</h1>
-        <a th:href="@{/cars}" class="product-button">View Cars</a>
+        <img th:src="@{/images/cars1.png}">
+        <div class="text-overlay">
+            <h1>Welcome to Our Car Dealership</h1>
+            <a th:href="@{/cars}" class="product-button">View Cars</a>
+        </div>
     </div>
-
-    </div>
-   
-
 </body>
 </html>
