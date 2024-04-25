@@ -42,14 +42,14 @@ public class carsDAO implements carsInterface {
     }
 
     @Override
-    public boolean deleteOne(int id) {
+    public boolean deleteOne(long id) {
         log.info("Deleting car with ID: {}", id); // Log the ID of the car being deleted
         int updateResult = jdbcTemplate.update("delete from cars where id = ?", new Object[]{id});
         return (updateResult > 0);
     }
 
     @Override
-    public carsModel updateOne(int idToUpdate, carsModel updateCar) {
+    public carsModel updateOne(long idToUpdate, carsModel updateCar) {
         log.info("Updating car with ID: {}", idToUpdate); // Log the ID of the car being updated
         int result = jdbcTemplate.update("update cars set make = ?, model = ?, year = ?, miles = ?, price = ?",
                 updateCar.getMake(),

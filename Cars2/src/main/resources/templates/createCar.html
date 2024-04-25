@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create New Car</title>
+    
+</head>
+<body>
+    <h1>Create New Car</h1>
+
+    <form class="form" action="#" th:action="@{/processNew}" th:object="${car}" method="post">
+        <table>
+            
+            <tr>
+                <td>Make:</td>
+                <td><input type="text" th:field="*{make}"/></td>
+            </tr>
+            <tr>
+                <td>Model:</td>
+                <td><input type="text" th:field="*{model}"/></td>
+            </tr>
+            <tr>
+                <td>Year:</td>
+                <td><input type="number" th:field="*{year}"/></td>
+            </tr>
+            <tr>
+                <td>Miles:</td>
+                <td><input type="number" th:field="*{miles}"/></td>
+            </tr>
+            <tr>
+                <td>Price:</td>
+                <td><input type="text" th:field="*{price}"/></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="Save"/></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

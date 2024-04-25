@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Edit a Car</title>
+</head>
+<body layout:fragment="content">
+    <h1>Edit Car</h1>
+    <form class="form" action="#" th:action="@{/processEdit}" th:object="${car}" method="post">
+        <table>
+            <tr>
+                <td>Make:</td>
+                <td><input type="text" th:field="*{make}"/></td>
+            </tr>
+            <tr>
+                <td>Model:</td>
+                <td><input type="text" th:field="*{model}"/></td>
+            </tr>
+            <tr>
+                <td>Year:</td>
+                <td><input type="number" th:field="*{year}"/></td>
+            </tr>
+            <tr>
+                <td>Miles:</td>
+                <td><input type="number" th:field="*{miles}"/></td>
+            </tr>
+            <tr>
+                <td>Price:</td>
+                <td><input type="text" th:field="*{price}"/></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="Save"/></td>
+            </tr>
+        </table>
+    </form>
+</body>
